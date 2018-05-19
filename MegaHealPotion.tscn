@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://HealPotion.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Megapotion.png" type="Texture" id=2]
+
+[node name="MegaHealPotion" instance=ExtResource( 1 )]
+
+texture_normal = ExtResource( 2 )
+healing_amount = 60.0
+
+[connection signal="pressed" from="." to="." method="_on_MegaHealPotion_pressed"]
+
+

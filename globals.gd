@@ -39,7 +39,8 @@ var insect_glaive = Weapon.new("Insect Glaive",range(1,13),range(0,0),range(13,2
 var hammer = Weapon.new("Hammer",range(1,17),range(0,0),range(17,21))
 var gunlance = Weapon.new("Gunlance",range(1,15),range(15,18),range(18,21))
 var greatsword = Weapon.new("GreatSword",range(1,18),range(18,19),range(19,21))
-var all_weapons = [lance,dual_blade,insect_glaive,light_bowgun,hammer,gunlance,greatsword]
+var longsword = Weapon.new("Longsword",range(1,10),range(0,0),range(10,21))
+var all_weapons = [lance,dual_blade,insect_glaive,light_bowgun,hammer,gunlance,greatsword,longsword]
 var cur_weapon = all_weapons[0]
 
 #Monsters
