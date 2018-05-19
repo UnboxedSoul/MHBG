@@ -1,0 +1,122 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://Augusta-Shadow.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://20D.tscn" type="PackedScene" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 25
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFontData" id=2]
+
+font_path = "res://Augusta.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 50
+use_mipmaps = false
+use_filter = false
+font_data = SubResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="Main" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="RollButton" type="Button" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 736.0
+margin_top = 512.0
+margin_right = 794.0
+margin_bottom = 546.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Roll"
+flat = false
+align = 1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="20D" parent="." index="1" groups=[
+"Player20D",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 105.514, 135.661 )
+scale = Vector2( 0.25, 0.25 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="20D2" parent="." index="2" groups=[
+"Player20D",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 220.072, 301.468 )
+scale = Vector2( 0.25, 0.25 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="20D3" parent="." index="3" groups=[
+"Player20D",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 345.181, 143.197 )
+scale = Vector2( 0.25, 0.25 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="20D4" parent="." index="4" groups=[
+"Player20D",
+] instance=ExtResource( 3 )]
+
+position = Vector2( 464.261, 298.453 )
+scale = Vector2( 0.25, 0.25 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="WeaponsChoice" type="OptionButton" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 594.0
+margin_top = 5.0
+margin_right = 1017.0
+margin_bottom = 67.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 3 )
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Test"
+flat = false
+align = 0
+selected = -1
+items = [  ]
+_sections_unfolded = [ "custom_fonts" ]
+
+[connection signal="pressed" from="RollButton" to="." method="_on_RollButton_pressed"]
+
+[connection signal="item_selected" from="WeaponsChoice" to="." method="_on_WeaponsChoice_item_selected"]
+
+

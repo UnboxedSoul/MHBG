@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://20D.gd" type="Script" id=1]
+[ext_resource path="res://20d.png" type="Texture" id=2]
+[ext_resource path="res://Augusta-Shadow.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 175
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="20D" type="Node2D"]
+
+script = ExtResource( 1 )
+max_val = 20
+roll_speed = 0.15
+atk_mod = Color( 0.835938, 0.0489807, 0.0489807, 1 )
+def_mod = Color( 0.131226, 0.208731, 0.839844, 1 )
+dodge_mod = Color( 0.104185, 0.710938, 0.0527649, 1 )
+
+[node name="20d" type="Sprite" parent="." index="0"]
+
+rotation = -0.0613676
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="20d" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -1.0
+margin_top = -121.0
+margin_right = 199.0
+margin_bottom = 74.0
+rect_rotation = 36.7482
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "20"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="RollTimer" type="Timer" parent="." index="1"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[connection signal="timeout" from="RollTimer" to="." method="_on_RollTimer_timeout"]
+
+
