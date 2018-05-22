@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://Augusta-Shadow.ttf" type="DynamicFontData" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Food.tscn" type="PackedScene" id=7]
 [ext_resource path="res://AncientRation.png" type="Texture" id=8]
 [ext_resource path="res://UsedAncientRation.png" type="Texture" id=9]
+[ext_resource path="res://Note.png" type="Texture" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -30,7 +31,7 @@ use_filter = false
 font_data = SubResource( 2 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -587,6 +588,144 @@ texture_normal = ExtResource( 8 )
 texture_disabled = ExtResource( 9 )
 _sections_unfolded = [ "Rect", "Textures" ]
 recovery_amount = 3
+
+[node name="Note" type="Sprite" parent="." index="29"]
+
+modulate = Color( 0, 0.71875, 1, 1 )
+position = Vector2( 714.753, 281.263 )
+scale = Vector2( 0.587409, 0.587409 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Note2" type="Sprite" parent="Note" index="0"]
+
+modulate = Color( 0, 0.71875, 1, 1 )
+position = Vector2( 57.8813, 0 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Note3" type="Sprite" parent="Note" index="1"]
+
+modulate = Color( 0, 0.71875, 1, 1 )
+position = Vector2( 117.465, 0 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Label" type="Label" parent="Note" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -31.0
+margin_top = 38.0
+margin_right = 66.0
+margin_bottom = 52.0
+rect_min_size = Vector2( 1, 1 )
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_colors/font_color = Color( 0, 0.0384521, 0.351562, 1 )
+text = "Heal SS (10 HP)"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors" ]
+
+[node name="Note2" type="Sprite" parent="." index="30"]
+
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 835.735, 283.313 )
+scale = Vector2( 0.587409, 0.587409 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Note2" type="Sprite" parent="Note2" index="0"]
+
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 57.8813, 0 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Note3" type="Sprite" parent="Note2" index="1"]
+
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 117.465, 0 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Label" type="Label" parent="Note2" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -7.0
+margin_top = 35.0
+margin_right = 51.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 1, 1 )
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Attack SS"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors" ]
+
+[node name="Note3" type="Sprite" parent="." index="31"]
+
+modulate = Color( 0.242188, 1, 0, 1 )
+position = Vector2( 778.32, 348.931 )
+scale = Vector2( 0.587409, 0.587409 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Note2" type="Sprite" parent="Note3" index="0"]
+
+modulate = Color( 0.148438, 1, 0, 1 )
+position = Vector2( 57.8813, 0 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Note3" type="Sprite" parent="Note3" index="1"]
+
+modulate = Color( 0.078125, 1, 0, 1 )
+position = Vector2( 117.465, 0 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Label" type="Label" parent="Note3" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -59.0
+margin_top = 38.0
+margin_right = 65.0
+margin_bottom = 52.0
+rect_min_size = Vector2( 1, 1 )
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_colors/font_color = Color( 0.195312, 1, 0, 1 )
+text = "Stamina SS (2 Extra)"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors" ]
 
 [connection signal="pressed" from="RollButton" to="." method="_on_RollButton_pressed"]
 

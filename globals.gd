@@ -34,13 +34,16 @@ class Monster:
 #Weapons
 var lance = Weapon.new("Lance",range(1,11),range(11,18),range(18,21))
 var dual_blade = Weapon.new("Dual Blade",range(1,11),range(0,0),range(11,21))
-var light_bowgun = Weapon.new("Light Bowgun",range(1,15),range(0,0),range(15,21))
+var light_bowgun = Weapon.new("Light Bowgun",range(1,12),range(0,0),range(12,21))
 var insect_glaive = Weapon.new("Insect Glaive",range(1,13),range(0,0),range(13,21))
 var hammer = Weapon.new("Hammer",range(1,17),range(0,0),range(17,21))
 var gunlance = Weapon.new("Gunlance",range(1,15),range(15,18),range(18,21))
 var greatsword = Weapon.new("GreatSword",range(1,18),range(18,19),range(19,21))
 var longsword = Weapon.new("Longsword",range(1,10),range(0,0),range(10,21))
-var all_weapons = [lance,dual_blade,insect_glaive,light_bowgun,hammer,gunlance,greatsword,longsword]
+var huntinghorn = Weapon.new("huntinghorn",range(1,7),range(7,14),range(14,21))
+var sns = Weapon.new("sns",range(1,5),range(5,14),range(14,21))
+var heavybowgun = Weapon.new("heavybowgun",range(1,15),range(0,0),range(15,21))
+var all_weapons = [lance,dual_blade,insect_glaive,light_bowgun,hammer,gunlance,greatsword,longsword,huntinghorn,sns,heavybowgun]
 var cur_weapon = all_weapons[0]
 
 #Monsters
